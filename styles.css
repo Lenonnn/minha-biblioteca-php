@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;500;700&family=Libre+Baskerville:wght@400;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    outline: 0;
+  }
+
+html{
+    /*Cada 1rem será considerado 10px*/
+    font-size: 62.5%;
+}
+  
+body {
+    font-size: 1.6rem;
+    background-color: rgb(181, 211, 212);
+}
+
+text {
+    font-family: 'Inconsolata', monospace;
+    font-family: 'Libre Baskerville', serif;
+}
+
+.header {
+    width: 100%;
+    height: 8rem;
+    background-color: rgb(34, 30, 30);  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header h1 {
+    text-align: center; 
+    color: rgb(202, 202, 211);
+    font-size: 4rem;
+    font-family:'Libre Baskerville', serif;
+
+}
+
+.content {
+    flex-direction: column;
+    text-align: center;
+}
+
+.content .infos h2 {
+    width: 100%;
+    margin-top: 2rem;
+    font-size: 2rem;
+    font-family: 'Libre Baskerville', serif;
+}
+
+.content .livros{
+    margin-top: 2rem;
+}
+
+.content .livros h3{
+    font-size: 1.5rem;
+    font-family: 'Libre Baskerville', serif;
+    margin-bottom: 3rem;
+}
+
+.content .livros .listaLivros {
+    margin-left: 0.5rem;
+}
+
+.content .livros .listaLivros table{
+    margin-top: 2rem;
+    border: solid 1px ;
+    text-align: center;
+}
+
+.content .livros .listaLivros table tr{
+    background-color: darkgray;
+}
+
+.content .livros .listaLivros table tr .tablivros{
+    width: 36rem;
+    height: 0.3rem; 
+}
+
+.content .livros .cad-livros{
+    flex-direction: column;
+    justify-items: center;
+    text-align: center;
+    max-width: 80%;
+}
+.content .livros .cad-livros form{
+    align-items: center;
+    justify-content: center;
+    border: solid 1px blue;
+    margin-left: 25%;
+}
+
+.content .livros .cad-livros input{
+    width: 80%;
+    height: 3.5rem;
+    border-radius: 0.4rem;
+    margin-top: 3rem;
+}
+
+.content .livros .cad-livros button{
+    width: 80%;
+    height: 3.5rem;
+    border-radius: 0.4rem;
+    background-color: rgb(135, 155, 223);
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+    font-size: 1.5rem;
+    font-family:bold 'Libre Baskerville', serif;
+}
+
+
+.content .clientes h3{
+    font-size: 1.5rem;
+    font-family: 'Libre Baskerville', serif;
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+}
+
+.content .clientes .listaClientes {
+    margin-left: 0.5rem;
+}
+
+
+.content .clientes .listaClientes table{
+    margin-top: 2rem;
+    border: solid 1px ;
+    text-align: center;
+}
+
+.content .clientes .listaClientes table tr{
+    background-color: rgb(235, 168, 168);
+}
+
+.content .clientes .listaClientes table tr .tabclientes{
+    width: 36rem;
+    height: 0.3rem; 
+}
+
+.content .clientes .cad-cliente{
+    flex-direction: column;
+    justify-items: center;
+    text-align: center;
+    max-width: 80%;
+}
+.content .clientes .cad-cliente form{
+    align-items: center;
+    justify-content: center;
+    border: solid 1px rgb(35, 35, 48);
+    margin-left: 25%;
+}
+
+.content .clientes .cad-cliente input{
+    width: 80%;
+    height: 3.5rem;
+    border-radius: 0.4rem;
+    margin-top: 3rem;
+}
+
+.content .clientes .cad-cliente button{
+    width: 80%;
+    height: 3.5rem;
+    border-radius: 0.4rem;
+    background-color: rgb(86, 87, 88);
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+    font-size: 1.5rem;
+    font-family:bold 'Libre Baskerville', serif;
+}
+
+/* #################### */
+
+
+.content .locacao h3{
+    font-size: 1.5rem;
+    font-family: 'Libre Baskerville', serif;
+    margin-bottom: 3rem;
+    margin-top: 3rem;
+}
+
+.content .locacao .listaLocacoes {
+    margin-left: 0.5rem;
+}
+
+
+.content .locacao .listaLocacoes table{
+    margin-top: 2rem;
+    border: solid 1px ;
+    text-align: center;
+}
+
+.content .locacao .listaLocacoes table tr{
+    background-color: rgb(134, 241, 124);
+}
+
+.content .locacao .listaLocacoes table tr .tablocacoes{
+    width: 36rem;
+    height: 0.3rem; 
+}
+
+.content .locacao .cad-locacao{
+    flex-direction: column;
+    justify-items: center;
+    text-align: center;
+    max-width: 80%;
+}
+.content .locacao .cad-locacao form{
+    align-items: center;
+    justify-content: center;
+    border: solid 1px rgb(35, 35, 48);
+    margin-left: 25%;
+    margin-bottom: 10rem;
+}
+
+.content .locacao .cad-locacao input{
+    width: 80%;
+    height: 3.5rem;
+    border-radius: 0.4rem;
+    margin-top: 3rem;
+}
+.content .locacao .cad-locacao select{
+    width: 80%;
+    height: 3.5rem;
+    border-radius: 0.4rem;
+    margin-top: 3rem;
+}
+
+.content .locacao .cad-locacao button{
+    width: 80%;
+    height: 3.5rem;
+    border-radius: 0.4rem;
+    background-color: rgb(30, 109, 189);
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+    font-size: 1.5rem;
+    font-family:bold 'Libre Baskerville', serif;
+}
