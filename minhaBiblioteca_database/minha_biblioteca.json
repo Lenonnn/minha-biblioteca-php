@@ -1,326 +1,57 @@
 [
-    {
-        "type": "header",
-        "version": "5.0.2",
-        "comment": "Export to JSON plugin for PHPMyAdmin"
-    },
-    {
-        "type": "database",
-        "name": "minha_biblioteca"
-    },
-    {
-        "type": "table",
-        "name": "clientes",
-        "database": "minha_biblioteca",
-        "data": [
-            {
-                "cod": "1",
-                "nome": "Florentina Almeida",
-                "endereco": "Rua das passas, bairro quatro, nº 10, Pelotas",
-                "email": "floretina@gmail.com",
-                "telefone": "+55 51 30303030"
-            },
-            {
-                "cod": "2",
-                "nome": "Marcio Almeida",
-                "endereco": "Rua das passas, bairro quatro, nº 20, Pelotas",
-                "email": "almeidamarcio@gmail.com",
-                "telefone": "+55 51 988776655"
-            },
-            {
-                "cod": "3",
-                "nome": "André Quexada",
-                "endereco": "Rua de los libres, bairro libertad, nº 318, Porto ",
-                "email": "andrequexada@gmail.com",
-                "telefone": "+55 51 978564568"
-            },
-            {
-                "cod": "4",
-                "nome": "Marta Silva",
-                "endereco": "Rua praia de beçlas, nº 2400 ap. 222, Porto Alegre",
-                "email": "msilva80@gmail.com",
-                "telefone": "+55 51 988332200"
-            },
-            {
-                "cod": "7",
-                "nome": "Jose da Dunas",
-                "endereco": "Rua do rio do Sinos, nº 100, São Leopoldo",
-                "email": "zezindadunas@gmail.com",
-                "telefone": "+55 51 987654321"
-            },
-            {
-                "cod": "8",
-                "nome": "Ronaldin do RS",
-                "endereco": "Rua dos migué, bairro de Lami, nº 171, Porto Alegr",
-                "email": "elbruxo10@gmail.com",
-                "telefone": "+55 51 917171717"
-            }
-        ]
-    },
-    {
-        "type": "table",
-        "name": "livros",
-        "database": "minha_biblioteca",
-        "data": [
-            {
-                "cod": "1",
-                "titulo": "Dom Casmurro",
-                "autor": "Machado de Assis",
-                "editora": "Livraria Garnier (primeira edi",
-                "dataPublicacao": "1899"
-            },
-            {
-                "cod": "2",
-                "titulo": "Dom Casmurro",
-                "autor": "Machado de Assis",
-                "editora": "Livraria Garnier (primeira edi",
-                "dataPublicacao": "1899"
-            },
-            {
-                "cod": "3",
-                "titulo": "Dom Casmurro",
-                "autor": "Machado de Assis",
-                "editora": "Livraria Garnier (primeira edi",
-                "dataPublicacao": "1899"
-            },
-            {
-                "cod": "4",
-                "titulo": "Quincas Borba",
-                "autor": "Machado de Assis",
-                "editora": "Livraria Garnier (segunda ediç",
-                "dataPublicacao": "1891"
-            },
-            {
-                "cod": "5",
-                "titulo": "Claro enigma",
-                "autor": "Carlos Drummond de Andrade",
-                "editora": "José Olympio",
-                "dataPublicacao": "1951"
-            },
-            {
-                "cod": "6",
-                "titulo": "Claro enigma",
-                "autor": "Carlos Drummond de Andrade",
-                "editora": "José Olympio",
-                "dataPublicacao": "1951"
-            },
-            {
-                "cod": "7",
-                "titulo": "Claro enigma",
-                "autor": "Carlos Drummond de Andrade",
-                "editora": "José Olympio",
-                "dataPublicacao": "1951"
-            },
-            {
-                "cod": "8",
-                "titulo": "Iracema",
-                "autor": "José de Alencar",
-                "editora": "Typ. de Viana & Filhos",
-                "dataPublicacao": "1865"
-            },
-            {
-                "cod": "9",
-                "titulo": "O sítio do pica-pau amarelo - Reinações de Narizinho",
-                "autor": "Monteiro Lobato",
-                "editora": "Várias",
-                "dataPublicacao": "1921"
-            },
-            {
-                "cod": "10",
-                "titulo": "O sítio do pica-pau amarelo - Caçadas de Pedrinho",
-                "autor": "Monteiro Lobato",
-                "editora": "Várias",
-                "dataPublicacao": "1922"
-            },
-            {
-                "cod": "11",
-                "titulo": "O sítio do pica-pau amarelo - O Saci",
-                "autor": "Monteiro Lobato",
-                "editora": "Várias",
-                "dataPublicacao": "1927"
-            },
-            {
-                "cod": "12",
-                "titulo": "O sítio do pica-pau amarelo - Memórias da Emília",
-                "autor": "Monteiro Lobato",
-                "editora": "Várias",
-                "dataPublicacao": "1930"
-            },
-            {
-                "cod": "13",
-                "titulo": "O sítio do pica-pau amarelo - Emília no País da Gramática ",
-                "autor": "Monteiro Lobato",
-                "editora": "Várias",
-                "dataPublicacao": "1931"
-            },
-            {
-                "cod": "14",
-                "titulo": "O sítio do pica-pau amarelo - Aritmética da Emília",
-                "autor": "Monteiro Lobato",
-                "editora": "Várias",
-                "dataPublicacao": "1932"
-            },
-            {
-                "cod": "15",
-                "titulo": "O sítio do pica-pau amarelo - Fábulas",
-                "autor": "Monteiro Lobato",
-                "editora": "Várias",
-                "dataPublicacao": "1933"
-            },
-            {
-                "cod": "16",
-                "titulo": "O sítio do pica-pau amarelo - Histórias Diversas",
-                "autor": "Monteiro Lobato",
-                "editora": "Várias",
-                "dataPublicacao": "1933"
-            },
-            {
-                "cod": "17",
-                "titulo": "O sítio do pica-pau amarelo - Histórias de Tia Nastácia",
-                "autor": "Monteiro Lobato",
-                "editora": "Várias",
-                "dataPublicacao": "1934"
-            },
-            {
-                "cod": "18",
-                "titulo": "O sítio do pica-pau amarelo - Peter Pan",
-                "autor": "Monteiro Lobato",
-                "editora": "Várias",
-                "dataPublicacao": "1935"
-            },
-            {
-                "cod": "19",
-                "titulo": "O sítio do pica-pau amarelo - Viagem ao Céu",
-                "autor": "Monteiro Lobato",
-                "editora": "Várias",
-                "dataPublicacao": "1935"
-            },
-            {
-                "cod": "20",
-                "titulo": "O sítio do pica-pau amarelo - Viagem ao Céu",
-                "autor": "Monteiro Lobato",
-                "editora": "Várias",
-                "dataPublicacao": "1935"
-            },
-            {
-                "cod": "21",
-                "titulo": "O sítio do pica-pau amarelo - O Poço do Visconde",
-                "autor": "Monteiro Lobato",
-                "editora": "Várias",
-                "dataPublicacao": "1935"
-            },
-            {
-                "cod": "22",
-                "titulo": "O sítio do pica-pau amarelo - O Picapau Amarelo",
-                "autor": "Monteiro Lobato",
-                "editora": "Várias",
-                "dataPublicacao": "1936"
-            },
-            {
-                "cod": "23",
-                "titulo": "O sítio do pica-pau amarelo - As Aventuras de Hans Staden",
-                "autor": "Monteiro Lobato",
-                "editora": "Várias",
-                "dataPublicacao": "1936"
-            },
-            {
-                "cod": "24",
-                "titulo": "O sítio do pica-pau amarelo - Dom Quixote das Crianças",
-                "autor": "Monteiro Lobato",
-                "editora": "Várias",
-                "dataPublicacao": "1937"
-            },
-            {
-                "cod": "25",
-                "titulo": "O sítio do pica-pau amarelo - Geografia de Dona Benta",
-                "autor": "Monteiro Lobato",
-                "editora": "Várias",
-                "dataPublicacao": "1937"
-            },
-            {
-                "cod": "26",
-                "titulo": "O sítio do pica-pau amarelo - A Chave do Tamanho",
-                "autor": "Monteiro Lobato",
-                "editora": "Várias",
-                "dataPublicacao": "1937"
-            },
-            {
-                "cod": "27",
-                "titulo": "O sítio do pica-pau amarelo - A Reforma da Natureza",
-                "autor": "Monteiro Lobato",
-                "editora": "Várias",
-                "dataPublicacao": "1939"
-            },
-            {
-                "cod": "30",
-                "titulo": "O sítio do pica-pau amarelo - O Minotauro",
-                "autor": "Monteiro Lobato",
-                "editora": "Várias",
-                "dataPublicacao": "1939"
-            },
-            {
-                "cod": "31",
-                "titulo": "O sítio do pica-pau amarelo - Os Doze Trabalhos de Hércules",
-                "autor": "Monteiro Lobato",
-                "editora": "Várias",
-                "dataPublicacao": "1941"
-            },
-            {
-                "cod": "32",
-                "titulo": "O sítio do pica-pau amarelo - História do Mundo para as Cria",
-                "autor": "Monteiro Lobato",
-                "editora": "Várias",
-                "dataPublicacao": "1942"
-            },
-            {
-                "cod": "35",
-                "titulo": "O sítio do pica-pau amarelo - Serões de Dona Benta",
-                "autor": "Monteiro Lobato",
-                "editora": "Várias",
-                "dataPublicacao": "1944"
-            },
-            {
-                "cod": "39",
-                "titulo": "O sítio do pica-pau amarelo - História das Invenções",
-                "autor": "Monteiro Lobato",
-                "editora": "Várias",
-                "dataPublicacao": "1947"
-            }
-        ]
-    },
-    {
-        "type": "table",
-        "name": "locacao",
-        "database": "minha_biblioteca",
-        "data": [
-            {
-                "cod": "1",
-                "obra": "39",
-                "locatario": "1",
-                "dataRetirada": "20.01.2020",
-                "dataDevolucao": "27.01.2020"
-            },
-            {
-                "cod": "2",
-                "obra": "6",
-                "locatario": "4",
-                "dataRetirada": "07.07.2019",
-                "dataDevolucao": "14.07.2019"
-            },
-            {
-                "cod": "3",
-                "obra": "11",
-                "locatario": "7",
-                "dataRetirada": "03.12.2018",
-                "dataDevolucao": "10.12.2018"
-            },
-            {
-                "cod": "4",
-                "obra": "14",
-                "locatario": "8",
-                "dataRetirada": "03.05.2019",
-                "dataDevolucao": "10.05.2019"
-            }
-        ]
-    }
+{"type":"header","version":"5.0.2","comment":"Export to JSON plugin for PHPMyAdmin"},
+{"type":"database","name":"minha_biblioteca"},
+{"type":"table","name":"clientes","database":"minha_biblioteca","data":
+[
+{"cod":"1","nome":"Florentina Almeida","endereco":"Rua das passas, bairro quatro, nº 10, Pelotas","email":"floretina@gmail.com","telefone":"+55 51 30303030"},
+{"cod":"2","nome":"Marcio Almeida","endereco":"Rua das passas, bairro quatro, nº 20, Pelotas","email":"almeidamarcio@gmail.com","telefone":"+55 51 988776655"},
+{"cod":"3","nome":"André Quexada","endereco":"Rua de los libres, bairro libertad, nº 318, Porto ","email":"andrequexada@gmail.com","telefone":"+55 51 978564568"},
+{"cod":"4","nome":"Marta Silva","endereco":"Rua praia de beçlas, nº 2400 ap. 222, Porto Alegre","email":"msilva80@gmail.com","telefone":"+55 51 988332200"},
+{"cod":"7","nome":"Jose da Dunas","endereco":"Rua do rio do Sinos, nº 100, São Leopoldo","email":"zezindadunas@gmail.com","telefone":"+55 51 987654321"},
+{"cod":"8","nome":"Ronaldin do RS","endereco":"Rua dos migué, bairro de Lami, nº 171, Porto Alegr","email":"elbruxo10@gmail.com","telefone":"+55 51 917171717"}
+]
+}
+,{"type":"table","name":"livros","database":"minha_biblioteca","data":
+[
+{"cod":"1","nome":"Dom Casmurro","autor":"Machado de Assis","editora":"Livraria Garnier (primeira edi","dataPublicacao":"1899"},
+{"cod":"2","nome":"Dom Casmurro","autor":"Machado de Assis","editora":"Livraria Garnier (primeira edi","dataPublicacao":"1899"},
+{"cod":"3","nome":"Dom Casmurro","autor":"Machado de Assis","editora":"Livraria Garnier (primeira edi","dataPublicacao":"1899"},
+{"cod":"5","nome":"Claro enigma","autor":"Carlos Drummond de Andrade","editora":"José Olympio","dataPublicacao":"1951"},
+{"cod":"6","nome":"Claro enigma","autor":"Carlos Drummond de Andrade","editora":"José Olympio","dataPublicacao":"1951"},
+{"cod":"7","nome":"Claro enigma","autor":"Carlos Drummond de Andrade","editora":"José Olympio","dataPublicacao":"1951"},
+{"cod":"8","nome":"Iracema","autor":"José de Alencar","editora":"Typ. de Viana & Filhos","dataPublicacao":"1865"},
+{"cod":"9","nome":"O sítio do pica-pau amarelo - Reinações de Narizinho","autor":"Monteiro Lobato","editora":"Várias","dataPublicacao":"1921"},
+{"cod":"10","nome":"O sítio do pica-pau amarelo - Caçadas de Pedrinho","autor":"Monteiro Lobato","editora":"Várias","dataPublicacao":"1922"},
+{"cod":"11","nome":"O sítio do pica-pau amarelo - O Saci","autor":"Monteiro Lobato","editora":"Várias","dataPublicacao":"1927"},
+{"cod":"12","nome":"O sítio do pica-pau amarelo - Memórias da Emília","autor":"Monteiro Lobato","editora":"Várias","dataPublicacao":"1930"},
+{"cod":"13","nome":"O sítio do pica-pau amarelo - Emília no País da Gramática ","autor":"Monteiro Lobato","editora":"Várias","dataPublicacao":"1931"},
+{"cod":"14","nome":"O sítio do pica-pau amarelo - Aritmética da Emília","autor":"Monteiro Lobato","editora":"Várias","dataPublicacao":"1932"},
+{"cod":"15","nome":"O sítio do pica-pau amarelo - Fábulas","autor":"Monteiro Lobato","editora":"Várias","dataPublicacao":"1933"},
+{"cod":"16","nome":"O sítio do pica-pau amarelo - Histórias Diversas","autor":"Monteiro Lobato","editora":"Várias","dataPublicacao":"1933"},
+{"cod":"17","nome":"O sítio do pica-pau amarelo - Histórias de Tia Nastácia","autor":"Monteiro Lobato","editora":"Várias","dataPublicacao":"1934"},
+{"cod":"18","nome":"O sítio do pica-pau amarelo - Peter Pan","autor":"Monteiro Lobato","editora":"Várias","dataPublicacao":"1935"},
+{"cod":"19","nome":"O sítio do pica-pau amarelo - Viagem ao Céu","autor":"Monteiro Lobato","editora":"Várias","dataPublicacao":"1935"},
+{"cod":"20","nome":"O sítio do pica-pau amarelo - Viagem ao Céu","autor":"Monteiro Lobato","editora":"Várias","dataPublicacao":"1935"},
+{"cod":"21","nome":"O sítio do pica-pau amarelo - O Poço do Visconde","autor":"Monteiro Lobato","editora":"Várias","dataPublicacao":"1935"},
+{"cod":"22","nome":"O sítio do pica-pau amarelo - O Picapau Amarelo","autor":"Monteiro Lobato","editora":"Várias","dataPublicacao":"1936"},
+{"cod":"23","nome":"O sítio do pica-pau amarelo - As Aventuras de Hans Staden","autor":"Monteiro Lobato","editora":"Várias","dataPublicacao":"1936"},
+{"cod":"24","nome":"O sítio do pica-pau amarelo - Dom Quixote das Crianças","autor":"Monteiro Lobato","editora":"Várias","dataPublicacao":"1937"},
+{"cod":"25","nome":"O sítio do pica-pau amarelo - Geografia de Dona Benta","autor":"Monteiro Lobato","editora":"Várias","dataPublicacao":"1937"},
+{"cod":"26","nome":"O sítio do pica-pau amarelo - A Chave do Tamanho","autor":"Monteiro Lobato","editora":"Várias","dataPublicacao":"1937"},
+{"cod":"27","nome":"O sítio do pica-pau amarelo - A Reforma da Natureza","autor":"Monteiro Lobato","editora":"Várias","dataPublicacao":"1939"},
+{"cod":"30","nome":"O sítio do pica-pau amarelo - O Minotauro","autor":"Monteiro Lobato","editora":"Várias","dataPublicacao":"1939"},
+{"cod":"31","nome":"O sítio do pica-pau amarelo - Os Doze Trabalhos de Hércules","autor":"Monteiro Lobato","editora":"Várias","dataPublicacao":"1941"},
+{"cod":"32","nome":"O sítio do pica-pau amarelo - História do Mundo para as Cria","autor":"Monteiro Lobato","editora":"Várias","dataPublicacao":"1942"},
+{"cod":"35","nome":"O sítio do pica-pau amarelo - Serões de Dona Benta","autor":"Monteiro Lobato","editora":"Várias","dataPublicacao":"1944"},
+{"cod":"39","nome":"O sítio do pica-pau amarelo - História das Invenções","autor":"Monteiro Lobato","editora":"Várias","dataPublicacao":"1947"}
+]
+}
+,{"type":"table","name":"locacao","database":"minha_biblioteca","data":
+[
+{"cod":"1","obra":"39","locatario":"1","dataRetirada":"20.01.2020","dataDevolucao":"27.01.2020"},
+{"cod":"2","obra":"6","locatario":"4","dataRetirada":"07.07.2019","dataDevolucao":"14.07.2019"},
+{"cod":"3","obra":"11","locatario":"7","dataRetirada":"03.12.2018","dataDevolucao":"10.12.2018"},
+{"cod":"4","obra":"14","locatario":"8","dataRetirada":"03.05.2019","dataDevolucao":"10.05.2019"}
+]
+}
 ]

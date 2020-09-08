@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 01-Set-2020 às 03:12
+-- Tempo de geração: 08-Set-2020 às 22:43
 -- Versão do servidor: 10.4.13-MariaDB
 -- versão do PHP: 7.4.8
 
@@ -55,7 +55,7 @@ INSERT INTO `clientes` (`cod`, `nome`, `endereco`, `email`, `telefone`) VALUES
 
 CREATE TABLE `livros` (
   `cod` int(12) NOT NULL,
-  `titulo` varchar(60) NOT NULL,
+  `nome` varchar(60) NOT NULL,
   `autor` varchar(60) NOT NULL,
   `editora` varchar(30) NOT NULL,
   `dataPublicacao` varchar(10) NOT NULL
@@ -65,11 +65,10 @@ CREATE TABLE `livros` (
 -- Extraindo dados da tabela `livros`
 --
 
-INSERT INTO `livros` (`cod`, `titulo`, `autor`, `editora`, `dataPublicacao`) VALUES
+INSERT INTO `livros` (`cod`, `nome`, `autor`, `editora`, `dataPublicacao`) VALUES
 (1, 'Dom Casmurro', 'Machado de Assis', 'Livraria Garnier (primeira edi', '1899'),
 (2, 'Dom Casmurro', 'Machado de Assis', 'Livraria Garnier (primeira edi', '1899'),
 (3, 'Dom Casmurro', 'Machado de Assis', 'Livraria Garnier (primeira edi', '1899'),
-(4, 'Quincas Borba', 'Machado de Assis', 'Livraria Garnier (segunda ediç', '1891'),
 (5, 'Claro enigma', 'Carlos Drummond de Andrade', 'José Olympio', '1951'),
 (6, 'Claro enigma', 'Carlos Drummond de Andrade', 'José Olympio', '1951'),
 (7, 'Claro enigma', 'Carlos Drummond de Andrade', 'José Olympio', '1951'),
@@ -143,7 +142,8 @@ ALTER TABLE `livros`
 -- Índices para tabela `locacao`
 --
 ALTER TABLE `locacao`
-  ADD PRIMARY KEY (`cod`);
+  ADD PRIMARY KEY (`cod`),
+  ADD KEY `obra_fk` (`obra`);
 
 --
 -- AUTO_INCREMENT de tabelas despejadas
@@ -166,6 +166,16 @@ ALTER TABLE `livros`
 --
 ALTER TABLE `locacao`
   MODIFY `cod` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- Restrições para despejos de tabelas
+--
+
+--
+-- Limitadores para a tabela `locacao`
+--
+ALTER TABLE `locacao`
+  ADD CONSTRAINT `obra_fk` FOREIGN KEY (`obra`) REFERENCES `livros` (`cod`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

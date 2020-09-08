@@ -7,11 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     
-    <link rel="stylesheet" href="styles.css">
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <link rel="stylesheet" href="style.css"> 
+    <script type="text/javascript" src="controller.js"></script>
     
     
 </head>
-<body>
+<body onload = "inicializa()">
     <div class="header">
         <header>
             <h1>
@@ -27,84 +29,82 @@
         </div>
 
 
+        <h2>Livros disponíveis</h2>
         <div class="livros">
-            <h3>Livros disponíveis</h3>
             <div class="listaLivros">
-                <table border=1 cellpadding=0 cellspacing=0>
-                    <tr>
-                        <td class="tablivros"><br><b>Titulo</b></td>
-                        <td class="tablivros"><br><b>Autor</b></td>
-                        <td class="tablivros"><br><b>Editora</b></td>
-                        <td class="tablivros"><br><b>Publicação</b></td>
+                <table class="tabheader" border=0 cellpadding=0 cellspacing=0>
+                    <tr bgcolor="darkgray">
+                        <td><img src=assets/sp.gif width=10 height=25></td>
+                        <td class="tabhead"><img src=assets/sp.gif width=270  height=5><br><b>Titulo</b></td>
+                        <td class="tabhead"><img src=assets/sp.gif width=270  height=5><br><b>Autor</b></td>
+                        <td class="tabhead"><img src=assets/sp.gif width=270  height=5><br><b>Editora</b></td>
+                        <td class="tabhead"><img src=assets/sp.gif width=270  height=5><br><b>Publicação</b></td>
                         <td><img src=assets/sp.gif width=26 height=4></td>
                     </tr>
                 </table>
+
                 <table id='tab_livros' border=0 cellpadding=0 cellspacing=0></table>
             </div>
-            <h3>Cadastrar livros</h3>
+            <h2>Cadastrar livros</h2>
             <div class="cad-livros">
-                <form >
+                <form action="" method="POST">
                     <input id="id_titulo" type="text" placeholder="Titulo" name="titulo">
                     <input id="id_autor" type="text" placeholder="Autor" name="autor">
                     <input id="id_editora" type="text" placeholder="Editora" name="editora">
                     <input id="id_publicacao" type="text" placeholder="Data publicação" name="publicacao">
                     <button type="button" onclick="insereLivro()">Cadastrar livro</button>
-                    <!-- <table border=0 cellpadding=0 cellspacing=0> -->
-                        <!-- <tr><td>Título:</td><td><input  type=text size=60 id='i_use' name=titulo></td></tr>
-                        <tr><td>Autor:	</td><td> <input type=text size=30 id='i_nic' name=nick></td></tr>
-                        <tr><td>Editora:	</td><td> <input type="email" size=30 id='i_ema' name=email></td></tr>
-                        <tr><td>Ano da publicação:	</td><td> <input type="number" size=3 min="1" id='i_ida' name=idade></td></tr>
-                        <td></td><td><button type="button" onclick="cadastrarLivros()">Cadastrar livro</button></td></tr>  -->
-                    <!-- </table> -->
-                </form>
+                </form>      
             </div>
         </div>
 
+        <hr>
 
         <div class="clientes">
-            <h3>Listagem de clientes</h3>
+            <h2>Listagem de clientes</h2>
             <div class="listaClientes">
-                <table border=1 cellpadding=0 cellspacing=0>
-                    <tr>
-                        <td class="tabclientes"><br><b>Nome</b></td>
-                        <td class="tabclientes"><br><b>Endereço</b></td>
-                        <td class="tabclientes"><br><b>Email</b></td>
-                        <td class="tabclientes"><br><b>Telefone</b></td>
+                <table class="tabheader" border=0 cellpadding=0 cellspacing=0>
+                    <tr bgcolor="darkgray">
+                        <td><img src=assets/sp.gif width=10 height=25></td>
+                        <td class="tabhead"><img src=assets/sp.gif width=270  height=5><br><b>Nome</b></td>
+                        <td class="tabhead"><img src=assets/sp.gif width=270  height=5><br><b>Endereço</b></td>
+                        <td class="tabhead"><img src=assets/sp.gif width=270  height=5><br><b>Email</b></td>
+                        <td class="tabhead"><img src=assets/sp.gif width=270  height=5><br><b>Telefone</b></td>
                         <td><img src=assets/sp.gif width=26 height=4></td>
                     </tr>
                 </table>
                 <table id='tab_clientes' border=0 cellpadding=0 cellspacing=0></table>
             </div>
 
-            <h3>Cadastrar clientes</h3>
+            <h2>Cadastrar clientes</h2>
             <div class="cad-cliente">
                 <form >
                     <input id="id_nome" type="text" placeholder="Nome" name="nome">
                     <input id="id_endereco" type="text" placeholder="Endereço" name="endereco">
                     <input id="id_email" type="text" placeholder="Email" name="email">
                     <input id="id_telefone" type="text" placeholder="Telefone" name="telefone">
-                    <button type="button" onclick="cadastrarLivros()">Cadastrar Cliente</button> 
+                    <button type="button" onclick="insereCliente()">Cadastrar Cliente</button> 
                 </form>
             </div>
         </div>
 
 
         <div class="locacao">
-            <h3>Listagem de locações</h3>
+            <h2>Listagem de locações</h2>
             <div class="listaLocacoes">
-                <table border=1 cellpadding=0 cellspacing=0>
-                    <tr>
-                        <td class="tablocacoes"><br><b>Obra ( titulo )</b></td>
-                        <td class="tablocacoes"><br><b>Locatario ( cliente )</b></td>
-                        <td class="tablocacoes"><br><b>Retirada</b></td>
-                        <td class="tablocacoes"><br><b>Devolução</b></td>
+                <table class="tabheader" border=0 cellpadding=0 cellspacing=0>
+                    <tr bgcolor="darkgray">
+                        <td><img src=assets/sp.gif width=10 height=25></td>
+                        <td class="tabhead"><img src=assets/sp.gif width=270  height=5><br><b>Obra ( titulo )</b></td>
+                        <td class="tabhead"><img src=assets/sp.gif width=270  height=5><br><b>Locatario ( cliente )</b></td>
+                        <td class="tabhead"><img src=assets/sp.gif width=270  height=5><br><b>Retirada</b></td>
+                        <td class="tabhead"><img src=assets/sp.gif width=270  height=5><br><b>Devolução</b></td>
                         <td><img src=assets/sp.gif width=26 height=4></td>
                     </tr>
                 </table>
                 <table id='tab_locacoes' border=0 cellpadding=0 cellspacing=0></table>
             </div>
 
-            <h3>Registrar locação</h3>
+            <h2>Registrar locação</h2>
             <div class="cad-locacao">
                 <form >
                     <select id="id_obra" placeholder="Titulo" name="obra" >
@@ -118,12 +118,5 @@
 
 
     </div>
-
-
-
-
-
-
-    <script src="controller.js"></script>
 </body>
 </html>
