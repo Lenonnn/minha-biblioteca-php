@@ -28,10 +28,6 @@
             <h2>Aplicação cadastra usuários, livros e registra locações !</h2>
         </div>
 
-
-
-        
-
         <h2>Livros disponíveis</h2>
         <div class="livros">
             <div class="listaLivros">
@@ -50,7 +46,7 @@
             </div>
             <h2>Cadastrar livros</h2>
             <div class="cad-livros">
-                <form action="" method="POST">
+                <form>
                     <input id="id_titulo" type="text" placeholder="Titulo" name="titulo">
                     <input id="id_autor" type="text" placeholder="Autor" name="autor">
                     <input id="id_editora" type="text" placeholder="Editora" name="editora">
@@ -110,11 +106,11 @@
             <h2>Registrar locação</h2>
             <div class="cad-locacao">
                 <form >
-                    <select id="id_obra" placeholder="Titulo" name="obra" >
-                        <input id="id_dtRetirada" type="text" placeholder="Data retirada" name="dataRetirada">
-                        <select id="id_locatario" placeholder="Cliente" name="locatario">
+                    <select id="allLivros" placeholder="Titulo" name="obra" >
+                    <input id="id_dtRetirada" type="text" placeholder="Data retirada" name="dataRetirada">
+                    <select id="allClientes" placeholder="Cliente" name="locatario">
                     <input id="id_dtDevolucao" type="text" placeholder="Data devolução" name="dataDevolucao">
-                    <button type="button" onclick="cadastrarLivros()">Confirmar locação</button> 
+                    <button type="button" onclick="cadastraLocacao()">Confirmar locação</button> 
                 </form>
             </div>
         </div>

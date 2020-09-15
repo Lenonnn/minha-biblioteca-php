@@ -56,18 +56,18 @@ function insereCliente() {
 }
 // LOCAÇÕES
 function cadastraLocacao() {
-    var id_obra = document.getElementById('listaLivros').value;
+    var id_obra = document.getElementById('allLivros').value;
     var id_dtRetirada = document.getElementById('id_dtRetirada').value;
-    var id_locatario = document.getElementById('listaClientes').value;
+    var id_locatario = document.getElementById('allClientes').value;
     var id_dtDevolucao = document.getElementById('id_dtDevolucao').value;
 
     //limpeza dos campos do form	
-    document.getElementById('listaLivros').value = 0;
+    document.getElementById('allLivros').value = 0;
     document.getElementById('id_dtRetirada').value = '';
-    document.getElementById('listaClientes').value = 0;
+    document.getElementById('allClientes').value = 0;
     document.getElementById('id_dtDevolucao').value = '';
 
-    parms = "&obra="+id_obra+"&dataRetirada="+id_dtRetirada+"&locatario="+id_locatario+"&id_dtDevolucao="+id_dtDevolucao;
+    parms = "&obra="+id_obra+"&locatario="+id_locatario+"&dataRetirada="+id_dtRetirada+"&id_dtDevolucao="+id_dtDevolucao;
     ajaxCall("controller.php?action=insLocacao" + parms, listaLocacoes);
 }
 
@@ -79,7 +79,7 @@ function deletaLivro(codLivro) {
 }
 //Clientes
 function deletaCliente(codCliente) {
-    ajaxCall("controller.php?action=delclic&id=" + codCliente, listaClientes);
+    ajaxCall("controller.php?action=delcli&id=" + codCliente, listaClientes);
 }
 // Locação
 function deletaLocacao(codLocacao) {
@@ -100,14 +100,16 @@ function inicializaSelecao(lis, elemento) {
         x.add(option);
     }
 }
+
 // INICIALIZA SELECAO DE LIVROS
-function inicializaSelecaoLivros(listLivros){  
-    inicializaSelecao(listLivros, "listaLivros");
+function inicializaSelecaoLivros(listAllLivros){  
+    inicializaSelecao(listAllLivros, "allLivros");
 }
 // INICIALIZA SELECAO DE CLIENTES
-function inicializaSelecaoClientes(listClientes) {
-    inicializaSelecao(listClientes, "listaClientes");
+function inicializaSelecaoClientes(listAllClientes) {
+    inicializaSelecao(listAllClientes, "allClientes");
 }
+
 //LISTA LIVROS
 function listaLivros(lisLivros) {
     document.getElementById('tab_livros').innerHTML = lisLivros;

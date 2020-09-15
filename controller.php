@@ -15,9 +15,9 @@ function conectDB(){
 	$con->set_charset("utf8");
 	return $con;
 }
+
 // Monta estrutura pra exibir tabela
 function mostraTabela($qtdeColunas, $consulta, $func){
-	
 	$i = 0;
 	$tab = "";
 	while( $row = mysqli_fetch_array($consulta, MYSQLI_NUM) ) 
@@ -69,7 +69,10 @@ function mostraClientes(){
 // busca locações no db
 function mostraLocacoes(){
     $con = conectDB();
-    $result = mysqli_query($con,"SELECT * FROM locacao LC, clientes C, livros L WHERE LC.obra = L.cod AND LC.locatario = C.cod"); 		
+    $result = mysqli_query($con,"SELECT livros.nome, clientes.nome, locacao.dataRetirada, locacao.dataDevolucao, locacao.cod
+								 FROM locacao
+								 INNER JOIN clientes ON clientes.cod = locacao.locatario
+								 INNER JOIN livros ON livros.cod = locacao.obra"); 		
     mostraTabela(4,$result,'Locacoes');    
     $con->close();                       
 }
@@ -84,7 +87,7 @@ function mostraLocacoes(){
 		$editoraLivro = $con->real_escape_string($_REQUEST['editora']);
 		$dataPublicao = $con->real_escape_string($_REQUEST['dataPublicacao']);
 
-		mysqli_query($con,"INSERT INTO livros (nome,autor,aditora,dataPublicacao) VALUES('$tituloLivro','$autorLivro','$editoraLivro','$dataPublicao');");
+		mysqli_query($con,"INSERT INTO livros (nome,autor,editora,dataPublicacao) VALUES('$tituloLivro','$autorLivro','$editoraLivro','$dataPublicao');");
 		$con->close();			
 		mostraLivros();
 	}
@@ -97,7 +100,7 @@ function mostraLocacoes(){
 		$emailCli = $con->real_escape_string($_REQUEST['email']);
 		$phoneCli = $con->real_escape_string($_REQUEST['telefone']);
 
-		mysqli_query($con,"INSERT INTO livros (nome,endereco,email,telefone) VALUES('$nomeCli','$endCli','$emailCli','$phoneCli');");
+		mysqli_query($con,"INSERT INTO clientes (nome,endereco,email,telefone) VALUES('$nomeCli','$endCli','$emailCli','$phoneCli');");
 		$con->close();			
 		mostraClientes();
 	}
@@ -106,11 +109,11 @@ function mostraLocacoes(){
 	{
 		$con = conectDB();
 		$tituloObra = $con->real_escape_string($_REQUEST['obra']);
-		$dataLocacao = $con->real_escape_string($_REQUEST['dataRetirada']);
 		$nomeCliente = $con->real_escape_string($_REQUEST['locatario']);
+		$dataLocacao = $con->real_escape_string($_REQUEST['dataRetirada']);
 		$dataDevolucao = $con->real_escape_string($_REQUEST['id_dtDevolucao']);
 
-		mysqli_query($con,"INSERT INTO locacao (obra,locatario,dataRetirada,dataDevolucao) VALUES('$tituloObra','$dataLocacao','$nomeCliente','$dataDevolucao');");
+		mysqli_query($con,"INSERT INTO locacao (obra,locatario,dataRetirada,dataDevolucao) VALUES('$tituloObra','$nomeCliente','$dataLocacao','$dataDevolucao');");
 		$con->close();			
 		mostraLocacoes();
 	}
@@ -133,7 +136,7 @@ function mostraLocacoes(){
 		mostraClientes();
 	}
 	// Deleta locacao
-	if(@$_REQUEST['action'] == "dello")     
+	if(@$_REQUEST['action'] == "delloc")     
 	{
 		$con = conectDB();
 		$res = mysqli_query($con,"DELETE FROM locacao WHERE locacao.cod  =  ".$_REQUEST['id']);
